@@ -31,29 +31,67 @@
 
 
 
-    <title>index</title>
+
+    <style>
+        .page,
+        .page__background,
+        .page__content {
+            background-color: rgb(202, 188, 247);
+            position: absolute;
+        }
+
+        .toolbaricon {
+            padding-left: 5px;
+            padding-bottom: 5px;
+            padding-right: 5px;
+            color: white;
+        }
+
+        * {
+            font-family: 'Sniglet', cursive;
+
+
+        }
+
+        .title {
+
+            font-family: 'Sniglet', cursive;
+        }
+
+        .text {
+            font-family: 'Sniglet', cursive;
+        }
+    </style>
+
 </head>
 
 <body>
+
+
     <ons-page>
+
         <div style="text-align: center; margin-top: 30px;">
+            <h3>
+                <b>Login PsuShopping</b>
+                <br>
+                <br>
+                <img src="/image/img.png" style="height :150px" width :"60px">
+            </h3>
             <p>
                 <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
             </p>
             <p>
                 <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
             </p>
-            <p style="margin-top: 30px;">
-                <ons-button onclick="login()">Sign in</ons-button>
-            </p>
-
-            <p style="margin-top: 30px;">
-                <ons-button onclick="google()">Sign in with Google</ons-button>
-            </p>
-
-            <p style="margin-top: 30px;">
-                <ons-button onclick="facebook()">Sign in with Facebook</ons-button>
-            </p>
+            <div class="loginapp">
+                <ons-button onclick="login()" class="btn btn-lg " style="background-color:crimson ">Sign in</ons-button>
+            </div>
+            <br>
+            <div class="signinApp">
+                <ons-button onclick="google()" style="background-color: rgb(236, 154, 0)">Sign in with Google</ons-button>
+                <ons-button onclick="facebook()" style="background-color:rgb(255, 83, 183)">Sign in with Facebook</ons-button>
+            </div>
+            
 
 
             <p style="margin-top: 30px;">
@@ -62,6 +100,10 @@
 
 
         </div>
+
+
+
+
     </ons-page>
 
     <script>
